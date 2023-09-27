@@ -28,6 +28,14 @@ const resolvers = {
     review(_, args) {
       return db.reviews.find((review) => review.id === args.id);
     },
+    /**
+     * review(parent
+     * [refers to the parent resolver in the chain], 
+     * args[arguments], 
+     * context[for supplying context variables]) {
+     *   return
+     * }
+     */
   },
 };
 
