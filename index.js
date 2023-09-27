@@ -7,6 +7,7 @@ import db from './_db.js';
 // types
 import { typeDefs } from './schema.js';
 
+// resolvers
 const resolvers = {
   Query: {
     games() {
@@ -24,8 +25,8 @@ const resolvers = {
     reviews() {
       return db.reviews;
     },
-    reviews(_, args) {
-      return db.reviews.find((reviews) => reviews.id === args.id);
+    review(_, args) {
+      return db.reviews.find((review) => review.id === args.id);
     },
   },
 };
@@ -45,5 +46,5 @@ console.log(`Server ready at port`, 4000);
 /**
  * Links for course:
  * https://www.apollographql.com/docs/apollo-server/getting-started/
- * https://www.youtube.com/watch?v=5199E50O7SI
+ * https://www.youtube.com/watch?v=5199E50O7SI  46:24 (06 - Query Variables)
  */
