@@ -67,7 +67,8 @@ const resolvers = {
         id: Math.floor(Math.random() * 10000).toString(),
       };
       db.games.push(game);
-      return db.games;
+
+      return game;
     },
   },
 };
